@@ -1,0 +1,17 @@
+*.class
+*.png
+.project
+*.prefs
+build/tmp/runTests/jar_extract_864607367593751861_tmp
+build/tmp/runTests/jar_extract_8942426620901171578_tmp
+*.lock
+*.bin
+.idea/
+.gradle/
+.idea/vcs.xml
+.idea/misc.xml
+.idea/gradle.xml
+*.log
+.idea/workspace.xml
+build
+test-output

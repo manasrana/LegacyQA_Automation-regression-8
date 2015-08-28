@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sprint" verbose="1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Add New Line flow">
+        <parameter name="test-type" value="internal"/>
+        <classes>
+            <class name="sprint.tests.AddNewLineTests"/>
+            <methods>
+                <include name="QA_4244_WithEasyPay_AppleCareAndAlternateDownPayment"/>
+                <include name="QA_3928_SprintNonEasyPayWithNewActivation_FamilySharePackPlan"/>
+                <include name="QA_4242_NewActivationWithEasyPay"/>
+                <include name="QA_85_SPT2YrContract_CancelOrderBeforePayment"/>
+                <include name="QA_2966_SprintNewActivationWithEasyPay"/>
+                <include name="QA_1705_Sprint2YrContractWithNewActivation"/>
+                <include name="QA_4248_SprintEasyPay_CancelOrder_WithOutAccepting_Contract"/>
+                <include name="QA_93_Sprint2YrAALExistingFamilyPlan"/>
+                <include name="QA_2640_SPTNonEasy_APIFailDuringActivation_ManualFlows"/>
+                <include name="QA_84_Sprint2YrContractWithAppleCareAndApprovedNoDeposit"/>
+                <include name="QA_4162_WithEasyPay_WithDepositandNumberPort"/>
+                <include name="QA_80_Sprint_FamilyPlan_NewActivation_NumPorting"/>
+            </methods>
+        </classes>
+    </test>
+    <test name="Upgrade Tests">
+        <parameter name="test-type" value="internal"/>
+        <classes>
+            <class name="sprint.tests.UpgradeTests"/>
+            <methods>
+                <include name="QA_4255_SprintAALToExistingOptEasyPayAlterDownPay"/>
+                <include name="QA3096_BuddyUpgradeMultipleLinesEligibleOneUpgradeEligibleOneUpgradeIneligible"/>
+                <include name="QA3065_SprintFamilyAccountUpgradeEasyPayExistingPlan"/>
+                <include name="QA_3181_SprintAddaLineCancelOnInstallmentDetails"/>
+                <include name="QA_3137_DoActivationAPI_ReturnErrorCode"/>
+                <include name="QA_495_Sprint2YrAALExistingFamilyPlan"/>
+                <include name="QA_4258_SprintEasyAddaLine"/>
+                <include name="QA87_UpgradeAllLinesWithNewFamilyPlanWithESecuritel"/>
+                <include name="QA92_AddALineNumberPortWithDepositActivationThroughShipadmin"/>
+            </methods>
+        </classes>
+    </test>
+    <!--<test name="Exchange Tests">-->
+    <!--<parameter name="test-type" value="internal"/>-->
+    <!--<classes>-->
+    <!--<class name="sprint.tests.ExchangeTests"/>-->
+    <!--<methods>-->
+    <!--<include name="QA_4263_VerizonSprintEasyUpgradeExchangeToEasyPay"/>-->
+    <!--</methods>-->
+    <!--</classes>-->
+    <!--</test>-->
+    <test name="Return Tests">
+    <parameter name="test-type" value="internal"/>
+    <classes>
+    <class name="sprint.tests.ReturnTests"/>
+    <methods>
+    <include name="QA_91_Return_All_Family_Lines"/>
+    </methods>
+    </classes>
+    </test>
+</suite>
