@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import framework.BrowserSettings;
@@ -402,9 +403,12 @@ public class AdminPage {
                         + ControlLocators.GRANT_PERMISSIONS_URL);
         WebElement element = utilities.findByXp(BrowserSettings.driver,
                 ControlLocators.GRANT_ALL_PERMISSIONS_EXPR);
-        if (!utilities.contains(element, "selected")) {
-            element.click();
-        }
+        Actions action = new Actions(BrowserSettings.driver);
+        action.moveToElement(element).doubleClick().build().perform();
+        Utilities.implicitWaitSleep(10000);
+//        if (!utilities.contains(element, "selected")) {
+//            element.click();
+//        }
     }
 
     public int totalErrorCount() {
@@ -452,7 +456,7 @@ public class AdminPage {
                     isPass = true;
                 } else if (errorList.get(start).toLowerCase()
                         .contains(new String(PHP_WARNING).toLowerCase())) {
-                    Reporter.log("Warning: "+errorList.get(start));
+                    Reporter.log("Warning: " + errorList.get(start));
                     isPass = true;
                 } else {
                     isPass = true;

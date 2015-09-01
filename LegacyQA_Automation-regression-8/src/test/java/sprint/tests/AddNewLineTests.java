@@ -4,6 +4,7 @@ import framework.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -137,9 +138,9 @@ public class AddNewLineTests extends RetailBaseClass {
 
             // Verify whether which enviorement to use internal or external.
             Reporter.log("<br> Test Type Settings");
-           // selectingCarrierEnviornment(testType);
+            // selectingCarrierEnviornment(testType);
             // Switching to previous tab.
-           // Utilities.switchPreviousTab();
+            // Utilities.switchPreviousTab();
 
             //region Calling DBError utility to  find initial count or error in log files.
             Reporter.log("<br> DB Errors Initial Check:");
@@ -173,8 +174,7 @@ public class AddNewLineTests extends RetailBaseClass {
             Reporter.log("<br> DB Errors Verification ");
             DBError.navigateDBErrorPage();
             Assert.assertTrue(PageBase.AdminPage().isDBErrorFound(initialCount));
-        }
-        else{
+        } else {
             Reporter.log("<br><h3> Apple Care Test Cases Can Only Be Run on External Carrier Environment & respective Data</br></h3>");
         }
         Reporter.log("<h3>QA_84_Sprint2YrContractWithAppleCareAndApprovedNoDeposit - Test Case Completes<h3>");
@@ -285,7 +285,7 @@ public class AddNewLineTests extends RetailBaseClass {
         //selectingCarrierEnviornment_4248(testType);
 
         // Switching to previous tab.
-       // Utilities.switchPreviousTab();
+        // Utilities.switchPreviousTab();
 
         //Calling DBError utility to  find initial count or error in log files.
         Reporter.log("<br> DB Errors Initial Check:");
@@ -357,10 +357,10 @@ public class AddNewLineTests extends RetailBaseClass {
 
         // Verify whether which enviorement to use internal or external.
         Reporter.log("<br> Test Type Settings");
-       // selectingCarrierEnviornment_4242(testType);
+        // selectingCarrierEnviornment_4242(testType);
 
         // Switching to previous tab.
-       // Utilities.switchPreviousTab();
+        // Utilities.switchPreviousTab();
 
         ////Calling DBError utility to  find initial count or error in log files.
         Reporter.log("<br> DB Errors Initial Check:");
@@ -462,9 +462,9 @@ public class AddNewLineTests extends RetailBaseClass {
         Reporter.log("<h4>Description:</h4> New Activation w/ Easypay-Iphone with apple care - opt for Easypay -" +
                 "Select alternate down payment - with applecare and no deposit - Without number portability");
         if (testType.contains("external")) {
-        imeiDetails1 = PageBase.CSVOperations().GetIMEIAndProductName(CSVOperations.FileName.Sprint_IPhone5C);
+            imeiDetails1 = PageBase.CSVOperations().GetIMEIAndProductName(CSVOperations.FileName.Sprint_IPhone5C);
 
-        // Adding Devices to Inventory.
+            // Adding Devices to Inventory.
 //        PageBase.InventoryManagementPage().launchInventoryInNewTab(BrowserSettings.readConfig("inventoryStoreIdDetail"));
 //        PageBase.InventoryManagementPage().addDeviceToInventory(imeiDetails1.IMEI, imeiDetails1.ProductName);
 //
@@ -472,17 +472,17 @@ public class AddNewLineTests extends RetailBaseClass {
 //        Utilities.switchPreviousTab();
 //        Reporter.log("<br> IMEI Added to Inventory: " + imeiDetails1.IMEI + "(ProdCode: " + imeiDetails1.ProductName + ")");
 
-        Log.startTestCase("QA_4244_WithEasyPay_AppleCareAndAlternateDownPayment");
-        testType = BrowserSettings.readConfig("test-type");
+            Log.startTestCase("QA_4244_WithEasyPay_AppleCareAndAlternateDownPayment");
+            testType = BrowserSettings.readConfig("test-type");
 
-        // Verify whether which enviorement to use internal or external.
-        Reporter.log("<br> Test Type Settings");
+            // Verify whether which enviorement to use internal or external.
+            Reporter.log("<br> Test Type Settings");
 
-           // selectingExternalEnviornment_4248(testType);
+            // selectingExternalEnviornment_4248(testType);
             Utilities.implicitWaitSleep(3000);
 
             // Switching to previous tab.
-           // Utilities.switchPreviousTab();
+            // Utilities.switchPreviousTab();
 
             //Calling DBError utility to  find initial count or error in log files.
             Reporter.log("<br> DB Errors Initial Check:");
@@ -547,7 +547,7 @@ public class AddNewLineTests extends RetailBaseClass {
 
         // Verify whether which enviorement to use internal or external.
         Reporter.log("<br> Test Type Settings");
-       // selectingCarrierEnviornment_QA_3928(testType);
+        // selectingCarrierEnviornment_QA_3928(testType);
         //Utilities.switchPreviousTab();
 
         //region Calling DBError utility to  find initial count or error in log files.
@@ -619,7 +619,7 @@ public class AddNewLineTests extends RetailBaseClass {
 
         // Verify whether which enviorement to use internal or external.
         Reporter.log("<br> Test Type Settings");
-       // CarrierResponderSettings_QA_85();
+        // CarrierResponderSettings_QA_85();
 
         //Calling DBError utility to  find initial count or error in log files.
         Reporter.log("<br> DB Errors Initial Check:");
@@ -663,7 +663,7 @@ public class AddNewLineTests extends RetailBaseClass {
         String testType = BrowserSettings.readConfig("test-type");
         Log.startTestCase("QA_2640_SPTNonEasy_APIFailDuringActivation_ManualFlows");
 
-        if(testType.contains("external")) {
+        if (testType.contains("external")) {
         /*Verify whether which enviorement to use internal or external.*/
             selectingCarrierEnviornment_QA_2640(testType);
 
@@ -675,8 +675,8 @@ public class AddNewLineTests extends RetailBaseClass {
             IMEIDetails imeiDetails1 = PageBase.CSVOperations().GetIMEIAndProductName
                     (CSVOperations.FileName.Sprint_SamsungGalaxyS4_16GBWhite);
 
-        // Adding Two Devices to Inventory.
-        Reporter.log("<br> Receiving Inventory", true);
+            // Adding Two Devices to Inventory.
+            Reporter.log("<br> Receiving Inventory", true);
 //        PageBase.InventoryManagementPage().launchInventoryInNewTab();
 //        PageBase.InventoryManagementPage().addDeviceToInventory(imeiDetails1.IMEI, imeiDetails1.ProductName);
 //
@@ -690,8 +690,7 @@ public class AddNewLineTests extends RetailBaseClass {
             /////DBError Verification.
             DBError.navigateDBErrorPage();
             Assert.assertTrue(PageBase.AdminPage().isDBErrorFound(initialCount));
-        }
-        else{
+        } else {
             Reporter.log("Test Case is applicable only for External Environment");
         }
         Reporter.log("<h3>QA_2640_SPTNonEasy_APIFailDuringActivation_ManualFlows - Test Case Completes<h3>");
@@ -741,22 +740,22 @@ public class AddNewLineTests extends RetailBaseClass {
             System.out.print(orderId);
             QA_80_ShipAdminVerification(orderId);
             QA_80_InventoryManagement(imei, status);
-        PageBase.InventoryManagementPage().launchInventoryInNewTab(BrowserSettings.readConfig("inventoryStoreIdDetail"));
-        PageBase.InventoryManagementPage().addDeviceToInventory(imei.get(0), productName);
-        Reporter.log("<br> IMEI Added to Inventory: " + imei.get(0) + "(ProdCode: " + productName + ")");
-        PageBase.InventoryManagementPage().closeInventoryTab();
-        Utilities.switchPreviousTab();
+            PageBase.InventoryManagementPage().launchInventoryInNewTab(BrowserSettings.readConfig("inventoryStoreIdDetail"));
+            PageBase.InventoryManagementPage().addDeviceToInventory(imei.get(0), productName);
+            Reporter.log("<br> IMEI Added to Inventory: " + imei.get(0) + "(ProdCode: " + productName + ")");
+            PageBase.InventoryManagementPage().closeInventoryTab();
+            Utilities.switchPreviousTab();
 
-        PageBase.InventoryManagementPage().launchInventoryInNewTab(BrowserSettings.readConfig("inventoryStoreIdDetail"));
-        PageBase.InventoryManagementPage().addDeviceToInventory(imei.get(1), productName);
-        Reporter.log("<br> IMEI Added to Inventory: " + imei.get(1) + "(ProdCode: " + productName + ")");
-        PageBase.InventoryManagementPage().closeInventoryTab();
-        Utilities.switchPreviousTab();
+            PageBase.InventoryManagementPage().launchInventoryInNewTab(BrowserSettings.readConfig("inventoryStoreIdDetail"));
+            PageBase.InventoryManagementPage().addDeviceToInventory(imei.get(1), productName);
+            Reporter.log("<br> IMEI Added to Inventory: " + imei.get(1) + "(ProdCode: " + productName + ")");
+            PageBase.InventoryManagementPage().closeInventoryTab();
+            Utilities.switchPreviousTab();
 
-        Reporter.log("QA_80_Sprint_FamilyPlan_NewActivation_NumPorting");
-        Reporter.log("<h3>Description: </h3>" + "Sprint - family Plan order Run credit check prior checkout " +
-                "with deposit required and Number Porting" + " check the box for sprint ebill - smart phones");
-        Log.startTestCase("QA_80_Sprint_FamilyPlan_NewActivation_NumPorting");
+            Reporter.log("QA_80_Sprint_FamilyPlan_NewActivation_NumPorting");
+            Reporter.log("<h3>Description: </h3>" + "Sprint - family Plan order Run credit check prior checkout " +
+                    "with deposit required and Number Porting" + " check the box for sprint ebill - smart phones");
+            Log.startTestCase("QA_80_Sprint_FamilyPlan_NewActivation_NumPorting");
 
 
         }
@@ -785,10 +784,10 @@ public class AddNewLineTests extends RetailBaseClass {
 //            Utilities.switchPreviousTab();
 
             // Verify whether which environment to use internal or external.
-            //selectingCarrierEnviornment_4162(testType);
+            selectingCarrierEnviornment_4162(testType);
 
-            // Switching to previous tab.aditi
-            //Utilities.switchPreviousTab();
+            // Switching to previous tab.
+            Utilities.switchPreviousTab();
 
             //Calling DBError utility to  find initial count or error in log files.
             DBError.navigateDBErrorPage();
@@ -796,8 +795,7 @@ public class AddNewLineTests extends RetailBaseClass {
 
             // Switching to previous tab.
             Utilities.switchPreviousTab();
-
-            orderId = poaCompleteFlow_4162(testType, imeiDetails.IMEI, imeiDetails.Sim);
+            orderId = poaCompleteFlow_4162(testType, imeiDetails);
 
             //Inventory Management Page verification.
             if (readConfig("Activation").contains("true")) {
@@ -906,7 +904,7 @@ public class AddNewLineTests extends RetailBaseClass {
         PageBase.HomePageRetail().salesAndActivationsLink.click();
 
         // Click on New Activation link.
-       PageBase.ChoosePathPage().newActivation.click();
+        PageBase.ChoosePathPage().newActivation.click();
 
         // Scanning smart phone.
         PageBase.DeviceScanPage().enterDeviceScanDetails(imeiDetails1.IMEI);
@@ -961,8 +959,8 @@ public class AddNewLineTests extends RetailBaseClass {
         cartDevice2price = PageBase.CartPage().device2Price.getText();
         String monthlyRecurringFeeCartPage = PageBase.CartPage().monthlyRecurringFee.getText();
         String totalDueTodayCartPage = PageBase.CartPage().totalDueToday.getText();
-        monthlyRecurringFeeCartPage = monthlyRecurringFeeCartPage.replace("$","");
-        totalDueTodayCartPage = totalDueTodayCartPage.replace("$","");
+        monthlyRecurringFeeCartPage = monthlyRecurringFeeCartPage.replace("$", "");
+        totalDueTodayCartPage = totalDueTodayCartPage.replace("$", "");
         Reporter.log("<br> Monthly Recurring Fee Cart Page: " + monthlyRecurringFeeCartPage);
         Reporter.log("<br> Total Due Today Cart Page: " + totalDueTodayCartPage);
         PageBase.CommonControls().continueCommonButton.click();
@@ -1049,9 +1047,9 @@ public class AddNewLineTests extends RetailBaseClass {
         double device1PriceOrderConfirmPage = Double.parseDouble(PageBase.OrderReviewAndConfirmPage().device1PriceActual.getText().substring(1));
         double device2PriceOrderConfirmPage = Double.parseDouble(PageBase.OrderReviewAndConfirmPage().device2PriceActual.getText().substring(1));
         String dueAmountForDevice1 = PageBase.OrderReviewAndConfirmPage().dueAmountForDevice1.getText();
-        dueAmountForDevice1 = dueAmountForDevice1.replace("$","");
+        dueAmountForDevice1 = dueAmountForDevice1.replace("$", "");
         String dueAmountForDevice2 = PageBase.OrderReviewAndConfirmPage().dueAmountForDevice2.getText();
-        dueAmountForDevice2 = dueAmountForDevice2.replace("$","");
+        dueAmountForDevice2 = dueAmountForDevice2.replace("$", "");
         Double dueAmtForDevice1 = Double.parseDouble(dueAmountForDevice1);
         Double dueAmtForDevice2 = Double.parseDouble(dueAmountForDevice2);
 
@@ -1658,7 +1656,8 @@ public class AddNewLineTests extends RetailBaseClass {
 
             // Order Activation Complete page.
             Utilities.implicitWaitSleep(6000);
-            do{}while(driver.getCurrentUrl().contains("activation"));
+            do {
+            } while (driver.getCurrentUrl().contains("activation"));
             Utilities.waitForElementVisible(PageBase.OrderActivationCompletePage().ActivationComplete);
             Assert.assertTrue(PageBase.OrderActivationCompletePage().ActivationComplete.isDisplayed());
             Assert.assertTrue(PageBase.OrderActivationCompletePage().phoneNumberValueText.isDisplayed());
@@ -2150,15 +2149,15 @@ public class AddNewLineTests extends RetailBaseClass {
         PageBase.SprintEasyPayEligibilityResultPage().minimumDownPaymentEasyPayRadioButton.click();
         Utilities.implicitWaitSleep(1000);
         String downPaymentInstallmentDetails = driver.findElement(By.xpath
-                    (".//div[contains(text(),'Down payment')]/following-sibling::div/span")).getText();
-        downPaymentInstallmentDetails = downPaymentInstallmentDetails.replace("$","");
+                (".//div[contains(text(),'Down payment')]/following-sibling::div/span")).getText();
+        downPaymentInstallmentDetails = downPaymentInstallmentDetails.replace("$", "");
 
-         String devicePriceInstallmentDetailsPage = driver.findElement(By.xpath
+        String devicePriceInstallmentDetailsPage = driver.findElement(By.xpath
                 (".//div[contains(text(),'Device price with financing')]/following-sibling::div/span")).getText();
-        devicePriceInstallmentDetailsPage = devicePriceInstallmentDetailsPage.replace("$","");
+        devicePriceInstallmentDetailsPage = devicePriceInstallmentDetailsPage.replace("$", "");
 
         String installmentContractLength = driver.findElement(By.xpath
-                    (".//div[contains(text(),'Installment contract length')]/following-sibling::div/span")).getText();
+                (".//div[contains(text(),'Installment contract length')]/following-sibling::div/span")).getText();
         PageBase.CommonControls().continueCommonButton.click();
 
         // Selecting Plan.
@@ -2174,20 +2173,20 @@ public class AddNewLineTests extends RetailBaseClass {
         cartDevice1price = PageBase.CartPage().device1Price.getText();
         String monthlyRecurringFeeCartPage = PageBase.CartPage().monthlyRecurringFee.getText();
         String totalDueTodayCartPage = PageBase.CartPage().totalDueToday.getText();
-        monthlyRecurringFeeCartPage = monthlyRecurringFeeCartPage.replace("$","");
-        totalDueTodayCartPage = totalDueTodayCartPage.replace("$","");
+        monthlyRecurringFeeCartPage = monthlyRecurringFeeCartPage.replace("$", "");
+        totalDueTodayCartPage = totalDueTodayCartPage.replace("$", "");
         String downPaymentCartPage = driver.findElement(By.xpath(".//td[contains(text(),'Down Payment Amount')]/following-sibling::td/strong")).getText();
         Reporter.log("DownPayment at Cart Page: " + downPaymentCartPage);
         String monthlyDeviceInstallmentBalanceCartPage = driver.findElement(By.xpath(".//td[contains(text(),'Monthly Device Installment Balance')]/following-sibling::td/strong")).getText();
         Reporter.log("Monthly Device Installment Balance at Cart Page: " + monthlyDeviceInstallmentBalanceCartPage);
-        monthlyDeviceInstallmentBalanceCartPage = monthlyDeviceInstallmentBalanceCartPage.replace("$","");
-        downPaymentCartPage = downPaymentCartPage.replace("$","");
+        monthlyDeviceInstallmentBalanceCartPage = monthlyDeviceInstallmentBalanceCartPage.replace("$", "");
+        downPaymentCartPage = downPaymentCartPage.replace("$", "");
         String paymentOptionCartPage = driver.findElement(By.xpath(".//div[contains(text(),'Price Option')]/span")).getText();
-        Reporter.log("<br> Payment Option Displayed On Cart Page: "+ paymentOptionCartPage);
+        Reporter.log("<br> Payment Option Displayed On Cart Page: " + paymentOptionCartPage);
         Reporter.log("<br> Monthly Recurring Fee Cart Page: " + monthlyRecurringFeeCartPage);
         Reporter.log("<br> Total Due Today Cart Page: " + totalDueTodayCartPage);
         Assert.assertEquals(totalDueTodayCartPage, downPaymentInstallmentDetails);
-        Assert.assertEquals(downPaymentCartPage,downPaymentInstallmentDetails);
+        Assert.assertEquals(downPaymentCartPage, downPaymentInstallmentDetails);
         PageBase.CommonControls().continueCommonButton.click();
 
         //Selecting plan feature.
@@ -2233,7 +2232,7 @@ public class AddNewLineTests extends RetailBaseClass {
 //                ("//td[contains(text(),'Estimated Tax:')]/following-sibling::td[2]")).getText().
 //                contains(monthlyDeviceInstallmentBalanceCartPage));
         Assert.assertTrue(driver.findElement(By.xpath
-                                ("//h3[contains(text(),'Total Due Today:')]/parent::th/following-sibling::th/child::h3")).
+                ("//h3[contains(text(),'Total Due Today:')]/parent::th/following-sibling::th/child::h3")).
                 isDisplayed());
         Assert.assertTrue(driver.findElement
                 (By.xpath("//h3[contains(text(),'Estimated Total Recurring Fee:')]/parent::th/following-sibling::th/child::h3")).
@@ -2245,10 +2244,10 @@ public class AddNewLineTests extends RetailBaseClass {
         List<WebElement> child = driver.findElements(By.xpath(".//div[(@id='retailPage')]/section/table/tbody/child::*"));
 
         sumOfAdditions = sumOfAdditions + Double.valueOf(child.get(2).findElement(By.xpath("./child::td[2]")).getText().replace("$", "")) +
-                            Double.valueOf(child.get(3).findElement(By.xpath("./child::td[2]")).getText().replace("$", ""));
-        String estimatedTotalRecurringFee=driver.findElement(By.xpath
+                Double.valueOf(child.get(3).findElement(By.xpath("./child::td[2]")).getText().replace("$", ""));
+        String estimatedTotalRecurringFee = driver.findElement(By.xpath
                 (".//h3[contains(text(),'Estimated Total Recurring Fee')]/parent::th/following-sibling::th[2]/h3")).getText();
-        String estimatedMonthlyInstallmentOrderConfirmPage=driver.findElement(By.xpath
+        String estimatedMonthlyInstallmentOrderConfirmPage = driver.findElement(By.xpath
                 (".//h3[contains(text(),'Estimated Monthly Installment')]/parent::th/following-sibling::th[2]/h3")).getText();
         Assert.assertTrue(estimatedTotalRecurringFee.contains(monthlyRecurringFeeCartPage));
         Reporter.log("<br> Monthly Recurring Fee @ CartPage : " + monthlyRecurringFeeCartPage);
@@ -2260,7 +2259,8 @@ public class AddNewLineTests extends RetailBaseClass {
             String line1ActivationFeeOrderConfirmPage = driver.findElement(By.xpath(
                     "(//span[contains(text(),'One Time Activation Fee:')])[1]/following-sibling::span[1]")).getText();
             System.out.println("line1ActivationFeeOrderConfirmPage" + line1ActivationFeeOrderConfirmPage);
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
         PageBase.CommonControls().continueCommonButton.click();
 
         //Terms and Condition Page.
@@ -2348,7 +2348,7 @@ public class AddNewLineTests extends RetailBaseClass {
             String monthlyDeviceInstallmentCompletePage = driver.findElement(By.xpath
                     (".//td[contains(text(),'Monthly Device Installment')]/following-sibling::td[3]")).getText();
             Assert.assertTrue(monthlyDeviceInstallmentCompletePage.contains(monthlyDeviceInstallmentBalanceCartPage));
-            Reporter.log("Monthly Device Installment :"+monthlyDeviceInstallmentCompletePage);
+            Reporter.log("Monthly Device Installment :" + monthlyDeviceInstallmentCompletePage);
 
             //Activation fee verification.
             double activationFeeDev1OrderCompletePage = Double.parseDouble(PageBase.OrderActivationCompletePage().activationFeeDevice1.getText().substring(1));
@@ -2358,7 +2358,7 @@ public class AddNewLineTests extends RetailBaseClass {
             System.out.println("totalFee" + totalFee);
 //            Assert.assertTrue(line1ActivationFeeOrderConfirmPage.contains(String.valueOf(activationFeeDev1OrderCompletePage)));
 //            Assert.assertTrue(device1PriceOrderCompletePage.contains(String.valueOf(device1PriceOrderConfirmPage)));
-                    Reporter.log("<br>Order Complete Page:");
+            Reporter.log("<br>Order Complete Page:");
             Reporter.log("<br> Price is same in Order Review & Confirm Page and Order and Activation Complete Page");
 
             Reporter.log("<h3> <font color='green'> Prices across Cart Page, Order Review & Confirm Page and Order Activation & Complete Page </font></h3>");
@@ -2652,12 +2652,12 @@ public class AddNewLineTests extends RetailBaseClass {
     }
 
     private void selectingCarrierEnviornment(@Optional String testType) throws InterruptedException, AWTException, java.io.IOException {
-          // Need to set External server from Admin page.
-            AdminBaseClass adminBaseClass = new AdminBaseClass();
-            adminBaseClass.launchAdminInNewTab();
+        // Need to set External server from Admin page.
+        AdminBaseClass adminBaseClass = new AdminBaseClass();
+        adminBaseClass.launchAdminInNewTab();
 
-            PageBase.AdminPage().navigateToSimulator();
-            PageBase.AdminPage().selectWebAPIResponse("Sprint", "External");
+        PageBase.AdminPage().navigateToSimulator();
+        PageBase.AdminPage().selectWebAPIResponse("Sprint", "External");
         Reporter.log("<h2> External Testing: Sprint </h2>");
     }
 
@@ -3014,7 +3014,7 @@ public class AddNewLineTests extends RetailBaseClass {
         Utilities.waitForElementVisible(PageBase.CommonControls().continueCommonButton);
 
         //TODO: Need to read from data sheet.
-        Assert.assertEquals(PageBase.OrderReviewAndConfirmPage().dueAmountForDevice1.getText(),cartDevice1price);
+        Assert.assertEquals(PageBase.OrderReviewAndConfirmPage().dueAmountForDevice1.getText(), cartDevice1price);
         PageBase.CommonControls().continueCommonButton.click();
         if (readConfig("Activation").contains("true")) {
             //Terms and Condition Page.
@@ -3180,7 +3180,7 @@ public class AddNewLineTests extends RetailBaseClass {
         Assert.assertTrue(PageBase.OrderSummaryPage().orderNumberValueSALink.getText().contains(orderId));
         Assert.assertTrue(PageBase.OrderSummaryPage().orderBuyTypeValueText.getText().contains(Constants.PHONE_AND_PLAN));
         Assert.assertTrue(PageBase.OrderSummaryPage().partnerValueText.getText().contains(Constants.SPRINT_XML));
-        PageBase.ShipAdminPage().ShipAdminEventLog(driver,orderId);
+        PageBase.ShipAdminPage().ShipAdminEventLog(driver, orderId);
     }
 
     //endregion QA 3928 Private Methods
@@ -3389,9 +3389,9 @@ public class AddNewLineTests extends RetailBaseClass {
         System.out.println(PageBase.OrderReviewAndConfirmPage().dueAmountForDevice1.getText());
         System.out.println(PageBase.OrderReviewAndConfirmPage().dueAmountForDevice2.getText());
         String dueAmountForDevice1 = PageBase.OrderReviewAndConfirmPage().dueAmountForDevice1.getText();
-        dueAmountForDevice1 = dueAmountForDevice1.replace("$","");
+        dueAmountForDevice1 = dueAmountForDevice1.replace("$", "");
         String dueAmountForDevice2 = PageBase.OrderReviewAndConfirmPage().dueAmountForDevice2.getText();
-        dueAmountForDevice2 = dueAmountForDevice2.replace("$","");
+        dueAmountForDevice2 = dueAmountForDevice2.replace("$", "");
         Double dueAmtForDevice1 = Double.parseDouble(dueAmountForDevice1);
         Double dueAmtForDevice2 = Double.parseDouble(dueAmountForDevice2);
 
@@ -3482,13 +3482,13 @@ public class AddNewLineTests extends RetailBaseClass {
 
     //region QA 2640 Private methods
     private void selectingCarrierEnviornment_QA_2640(String testType) throws InterruptedException, AWTException, java.io.IOException {
-         //External
-            // Need to set External server from Admin page.
-            AdminBaseClass adminBaseClass = new AdminBaseClass();
-            adminBaseClass.launchAdminInNewTab();
+        //External
+        // Need to set External server from Admin page.
+        AdminBaseClass adminBaseClass = new AdminBaseClass();
+        adminBaseClass.launchAdminInNewTab();
 
-            PageBase.AdminPage().navigateToSimulator();
-            PageBase.AdminPage().selectWebAPIResponse("Sprint", "External");
+        PageBase.AdminPage().navigateToSimulator();
+        PageBase.AdminPage().selectWebAPIResponse("Sprint", "External");
 
         Utilities.switchPreviousTab();
     }
@@ -3967,7 +3967,7 @@ public class AddNewLineTests extends RetailBaseClass {
 
     // region QA 4162 Helper Methods
 
-    private String poaCompleteFlow_4162(String testType, String imei, String sim) throws IOException, InterruptedException, AWTException {
+    private String poaCompleteFlow_4162(String testType, IMEIDetails imeiDetails) throws IOException, InterruptedException, AWTException {
 
         CustomerDetails customerDetails = PageBase.CSVOperations().ReadCustomerDetailsFromCSV(ServiceProviderVerificationPage.IdType.DRIVERLICENCE);
         NumPortingDetails portDetails = PageBase.CSVOperations().ReadPortingDetails();
@@ -3984,73 +3984,69 @@ public class AddNewLineTests extends RetailBaseClass {
         // Click on Sales & Activations page.
         lStartTime = new Date().getTime();
         pageName = readPageName("SaleAndActivation");
+        Utilities.WaitUntilElementIsClickable(PageBase.HomePageRetail().salesAndActivationsLink);
         PageBase.HomePageRetail().salesAndActivationsLink.click();
         Utilities.webPageLoadTime(lStartTime, pageName);
 
         // Click on New Activation link.
         lStartTime = new Date().getTime();
         pageName = readPageName("DeviceScan");
+        Utilities.WaitUntilElementIsClickable(PageBase.ChoosePathPage().newActivation);
         PageBase.ChoosePathPage().newActivation.click();
         Utilities.webPageLoadTime(lStartTime, pageName);
 
         // Scanning smart phone.
-        PageBase.DeviceScanPage().enterDeviceScanDetails(imei);
+        PageBase.DeviceScanPage().enterDeviceScanDetails(imeiDetails.IMEI);
 
+//        //temp steps
+//        try {
+//            driver.findElement(By.xpath("//*[@id='buyform']/div[2]/ul/li[2]/a")).click();
+//            String[] data = driver.findElement(By.xpath(".//*[@id='retailPage']/section/div/h1/div/b")).getText().split(":");
+//            imeiDetails.IMEI = data[1].trim();
+//        } catch (Exception ex) {
+//
+//        }
+
+        Utilities.implicitWaitSleep(5000);
         //Sprint Easy Pay Page
-        Utilities.waitForElementVisible(PageBase.SprintEasyPayPage().yesButton);
-        PageBase.SprintEasyPayPage().yesButton.click();
+        PageBase.VerizonEdgePage().continueAfterOptionPage();
+        //Utilities.waitForElementVisible(PageBase.CommonControls().continueButtonDVA);
+        //PageBase.CommonControls().continueButtonDVA.click();
 
         //Filling information in Carrier Credit Check Page.
         Utilities.waitForElementVisible(PageBase.CarrierCreditCheckPage().guestAgreeToRunCCCheckBox);
-
+        Utilities.implicitWaitSleep(5000);
         CarrierCreditCheckDetails cccDetails = getCarrierCreditCheckDetails(PageBase.CSVOperations().GetIMEIOrSimNumberOrReceiptId(CSVOperations.FileName.SSNWithDeposit));
         PageBase.CarrierCreditCheckPage().populatingCarrierCreditCheckPage(cccDetails);
-
+        PageBase.CarrierCreditCheckPage().guestAgreeToRunCCCheckBox.sendKeys(Keys.PAGE_DOWN);
         PageBase.CarrierCreditCheckPage().guestAgreeToRunCCCheckBox.click();
 
         lStartTime = new Date().getTime();
         pageName = readPageName("CarrierCreditCheck");
         PageBase.CommonControls().continueButton.click();
-        Utilities.implicitWaitSleep(1000);
-        try {
-            if (PageBase.CommonControls().continueButton.isEnabled())
-                PageBase.CommonControls().continueButton.click();
-        } catch (Exception e) {
 
-        }
-        //if(testType.equals("internal")) PageBase.CommonControls().continueButton.click();
-        Utilities.webPageLoadTime(lStartTime, pageName);
-
-        // Credit Check Verification Results with deposits.
-        Utilities.waitForElementVisible(PageBase.CommonControls().continueCommonButton);
-        boolean exists = driver.findElements(By.id("checkbox-deposit-1")).size() != 0;
-        if (exists) {
-            Reporter.log("<br> Credit Check Completes.");
-            PageBase.CreditCheckVerificationResultsPage().depositCheckBox.click();
-            Reporter.log("<br> Selected Deposit Check Box ");
-        } else {
-            PageBase.CreditCheckVerificationResultsPage().creditCheckPassChkBox.click();
-        }
-        PageBase.CommonControls().continueCommonButton.click();
+        do {
+        } while ((driver.getCurrentUrl().contains("creditprocess")));
 
         Utilities.webPageLoadTime(lStartTime, pageName);
+        Reporter.log("<br> Credit check done");
 
         //Sprint Easy Pay Eligibility Result
-        Utilities.waitForElementVisible(PageBase.SprintEasyPayEligibilityResultPage().eligibleForEasyPayLabel, 120);
-        PageBase.SprintEasyPayEligibilityResultPage().minimumDownPaymentEasyPayRadioButton.click();
-        // Assert.assertTrue(PageBase.SprintEasyPayEligibilityResultPage().eligibleForEasyPayLabel.isDisplayed());
-        //Assert.assertTrue(PageBase.SprintEasyPayEligibilityResultPage().downPaymentLabel.isDisplayed());
-        // Assert.assertTrue(PageBase.SprintEasyPayEligibilityResultPage().installmentContractLengthLabel.isDisplayed());
+        //Sprint Easy Pay option is not Coming so continued with 2 yrs contract
+        Utilities.waitForElementVisible(PageBase.CommonControls().continueCommonButton);
+        PageBase.CreditCheckVerificationResultsPage().creditCheckPassChkBox.click();
         PageBase.CommonControls().continueCommonButton.click();
 
         // Selecting Plan.
         Utilities.waitForElementVisible(PageBase.VerizonShopPlansPage().sprintFamilySharePlan);
         PageBase.VerizonShopPlansPage().sprintFamilySharePlan.click();
-        PageBase.VerizonShopPlansPage().addPlan();
+        Reporter.log("<br> Selected family share plan");
 
         //Verifying device with plan and continue.
         Utilities.waitForElementVisible(PageBase.CommonControls().continueCommonButton);
         cartDevice1price = PageBase.CartPage().device1Price.getText();
+        String monthlyRecurringFee = PageBase.CartPage().monthlyRecurringFee.getText();
+        String totalDueToday = PageBase.CartPage().totalDueToday.getText();
         PageBase.CommonControls().continueCommonButton.click();
 
         //Selecting plan feature.
@@ -4058,84 +4054,88 @@ public class AddNewLineTests extends RetailBaseClass {
         PageBase.SelectPlanFeaturesPage().continueSPFButton.click();
 
         // Selecting Insurance.
-        try {
-            Utilities.waitForElementVisible(PageBase.CommonControls().continueButton);
-            PageBase.SelectProtectionPlanInsurancePage().selectAnInsurance();
-        } catch (Exception ex) {
+        PageBase.SelectProtectionPlanInsurancePage().selectNoInsuranceForSprintWithOneDevices();
+
+        // Selecting No Number Porting.
+        Utilities.waitForElementVisible(PageBase.NumberPortPage().noNumberPortRadiobutton);
+        if (!PageBase.NumberPortPage().noNumberPortRadiobutton.isSelected()) {
+            PageBase.NumberPortPage().noNumberPortRadiobutton.click();
         }
+        PageBase.CommonControls().continueButton.click();
+        Reporter.log("<br> No Number porting");
 
-        // Selecting Number Porting.
-        Utilities.ClickElement(PageBase.NumberPortPage().numberPortRadiobutton);
-        Utilities.ClickElement(PageBase.CommonControls().continueButton);
-
-        PageBase.PortMyNumbersPage().enterPortDataForPreCreditCheck(portDetails.CurrentPhoneNumber, portDetails.Carrier,
-                portDetails.CurrentAccNumber, portDetails.SSN);
-
-        // Enter data in Service Provider Verification page.
+        //Service Provider Verification Page
         PageBase.ServiceProviderVerificationPage().populatingSprintSPV(spvCollections[0], spvCollections[1], spvCollections[2]);
 
         // Order Review and Confirm Page.
         Utilities.waitForElementVisible(PageBase.CommonControls().continueCommonButton);
-
         PageBase.CommonControls().continueCommonButton.click();
+        Reporter.log("<br><p> Order Review and Confirm Page.</p>");
 
         if (readConfig("Activation").contains("true")) {
-            // Terms and Condition Page.
+            //Terms and Condition Page.
             Utilities.waitForElementVisible(PageBase.TermsAndConditionsPage().emailTCChkBox);
-            PageBase.TermsAndConditionsPage().emailTCChkBox.click();
-            PageBase.TermsAndConditionsPage().carrierTermsCheckBox.click();
-            PageBase.TermsAndConditionsPage().acceptsTargetTCCheckbox.click();
+            Utilities.selectCheckBox(PageBase.TermsAndConditionsPage().emailTCChkBox);
+            Utilities.selectCheckBox(PageBase.TermsAndConditionsPage().carrierTermsCheckBox);
+            Utilities.selectCheckBox(PageBase.TermsAndConditionsPage().acceptsTargetTCCheckbox);
+            Utilities.implicitWaitSleep(3000);
             PageBase.WirelessCustomerAgreementPage().signingWCA(driver);
+            Utilities.implicitWaitSleep(5000);
             PageBase.TermsAndConditionsPage().continueTCButton.click();
 
-            // Credit Card Payment Page
-            Utilities.implicitWaitSleep(10000);
-            if (driver.getCurrentUrl().contains("payment")) {
-                PageBase.PaymentRequiredPage().populatingCardDetailsPaymentRequired(PaymentRequiredPage.CardType.VISA);
-                Utilities.ClickElement(PageBase.PaymentRequiredPage().sameAddressTab);
-                Utilities.ClickElement(PageBase.PaymentRequiredPage().continuePRButton);
-            }
+//            do {
+//            } while (!(driver.getCurrentUrl().contains("printticket")));
 
             //Print Mobile Scan Sheet.
             Utilities.waitForElementVisible(PageBase.PrintMobileScanSheetPage().continueFirstMSSButton);
             orderId = PageBase.PrintMobileScanSheetPage().orderNumberValuePMSSText.getText();
-            //Assert.assertTrue(PageBase.PrintMobileScanSheetPage().firstDeviceBarCode.isDisplayed());
-
+            Assert.assertTrue(PageBase.PrintMobileScanSheetPage().firstDeviceBarCode.isDisplayed());
             PageBase.PrintMobileScanSheetPage().continueFirstMSSButton.click();
 
             // Payment Verification page. Scan Reciept id.
             Utilities.waitForElementVisible(PageBase.PaymentVerificationPage().textboxTargetReceiptID);
-            PageBase.PaymentVerificationPage().textboxTargetReceiptID.sendKeys(PageBase.CSVOperations().GetIMEIOrSimNumberOrReceiptId(CSVOperations.FileName.ReceiptId));
+            String recieptId = PageBase.CSVOperations().GetIMEIOrSimNumberOrReceiptId(CSVOperations.FileName.ReceiptId);
+            PageBase.PaymentVerificationPage().textboxTargetReceiptID.sendKeys(recieptId);
             PageBase.PaymentVerificationPage().submitButton.click();
 
-            //Device Verification and Activation page. Scan Device IMEI and enter SIM number.
+            //Device Verification and Activation page. Scan Device IEMI and enter SIM number.
             Utilities.waitForElementVisible(PageBase.DeviceVerificationaandActivation().deviceIMEITextbox);
-            PageBase.DeviceVerificationaandActivation().deviceVerificationActiavtionFor1Device(imei, sim);
+            PageBase.DeviceVerificationaandActivation().deviceVerificationActiavtionFor1Device(imeiDetails.IMEI, imeiDetails.Sim);
             PageBase.CommonControls().continueActivation.click();
+
+            do {
+            } while (!(driver.getCurrentUrl().contains("receipt")));
 
             //Device Financing Installment Contract.
             Utilities.waitForElementVisible(PageBase.DeviceFinancingInstallmentContractPage().print);
             PageBase.DeviceFinancingInstallmentContractPage().print.click();
-            Utilities.implicitWaitSleep(3000);
             Robot robot = new Robot();
-            Utilities.sendKeys(KeyEvent.VK_ENTER, robot);
             Utilities.implicitWaitSleep(6000);
+            Utilities.sendKeys(KeyEvent.VK_ESCAPE, robot);
+            //CommonFunction.clickingNTimesTab(8);
+//            Utilities.implicitWaitSleep(2000);
+
+            //Utilities.sendKeys(KeyEvent.VK_ENTER, robot);
+            Utilities.implicitWaitSleep(5000);
             Utilities.waitForElementVisible(PageBase.DeviceFinancingInstallmentContractPage().guestAcceptChkBox);
-            PageBase.DeviceFinancingInstallmentContractPage().guestAcceptChkBox.click();
-            PageBase.WirelessCustomerAgreementPage().signingWCA(driver);
-            PageBase.WirelessCustomerAgreementPage().continueWCAButton.click();
+            Utilities.WaitUntilElementIsClickable(PageBase.DeviceFinancingInstallmentContractPage().guestAcceptChkBox);
+            Utilities.waitForElementVisible(PageBase.DeviceFinancingInstallmentContractPage().cancelOrder);
+            Utilities.WaitUntilElementIsClickable(PageBase.DeviceFinancingInstallmentContractPage().cancelOrder);
+            PageBase.DeviceFinancingInstallmentContractPage().cancelOrder.click();
+            Utilities.implicitWaitSleep(4000);
+            driver.switchTo().alert().accept();
+//            Utilities.sendKeys(KeyEvent.VK_ENTER, robot);
             Utilities.implicitWaitSleep(4000);
 
-            //Order Activation and Complete Page
-            Utilities.waitForElementVisible(PageBase.OrderActivationCompletePage().orderAndActivationCompleteText, 120);
-            Assert.assertTrue(PageBase.OrderActivationCompletePage().orderAndActivationCompleteText.isDisplayed());
-            Assert.assertEquals(PageBase.OrderActivationCompletePage().iMEINumberValueText.getText(), imei);
-            Assert.assertEquals(PageBase.OrderActivationCompletePage().simNumberValueText.getText(), sim);
-            // Assert.assertTrue(PageBase.OrderActivationCompletePage().printConfirmationSlipButton.isDisplayed());
-            //  Assert.assertTrue(PageBase.OrderActivationCompletePage().deviceModelLabel.isDisplayed());
-            //  Assert.assertTrue(PageBase.OrderActivationCompletePage().downPaymentLabel.isDisplayed());
-            //  Assert.assertTrue(PageBase.OrderActivationCompletePage().monthlyDeviceInstallmentLabel.isDisplayed());
-            //  Assert.assertTrue(PageBase.OrderActivationCompletePage().lastMonthInstallmentLabel.isDisplayed());
+            try {
+                driver.switchTo().defaultContent();
+                Utilities.waitForDocumentReady(driver);
+                System.out.println(driver.getCurrentUrl());
+                Utilities.WaitUntilElementIsClickable(PageBase.HomePageRetail().newGuestButton);
+            } catch (Exception ex) {
+            }
+            Reporter.log("<br> Cancelled the order");
+
         } else {
             Reporter.log("<h3><font color='red'> Activation is stopped purposefully. Change the key in Test Settings to Activate </h3></font>");
         }
@@ -4352,7 +4352,7 @@ public class AddNewLineTests extends RetailBaseClass {
         return cccDetails;
     }
 
-    public void acceptTermsAndConditionsWithSignature(){
+    public void acceptTermsAndConditionsWithSignature() {
         Utilities.waitForElementVisible(PageBase.TermsAndConditionsPage().emailTCChkBox);
         Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Sprint Terms')]")).getText().contains("Sprint Terms"));
         Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Target Terms')]")).getText().contains("Target Terms"));

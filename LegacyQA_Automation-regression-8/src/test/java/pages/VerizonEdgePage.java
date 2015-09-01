@@ -75,12 +75,12 @@ public class VerizonEdgePage {
 	}
 	// region new opt in page code
 	public static void verizonDF(){
-		Utilities.waitForElementVisible(BrowserSettings.driver.findElement(By.id("title_1")));
+		Utilities.waitForElementVisible(BrowserSettings.driver.findElement(By.id("title_2")));
 		PageBase.CommonControls().continueButtonDVA.click();
 	}
 
 	public static void verizon2YrContract(){
-		Utilities.waitForElementVisible(BrowserSettings.driver.findElement(By.id("title_1")));
+		Utilities.waitForElementVisible(BrowserSettings.driver.findElement(By.id("title_2")));
 		BrowserSettings.driver.findElement(By.id("title_1")).click();
 		//PageBase.CommonControls().continueButtonDVA.click();
 	}

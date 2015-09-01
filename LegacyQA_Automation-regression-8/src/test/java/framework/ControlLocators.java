@@ -16,7 +16,7 @@ public class ControlLocators {
     public static final String NEW_GUEST_BUTTON = "//span[contains(text(),'New Guest')]";
     public static final String CART_ICON = "";
     public static final String SETTINGS_ICON = "";
-    public static final String SALES_AND_ACTIVATIONS_LINK = "//p[contains(text(),'Sales & Activations')]";
+    public static final String SALES_AND_ACTIVATIONS_LINK = "//p[contains(text(),'Sales & Activations')]/..";
     public static final String UPGRADE_ELIGIBILITY_CHECKER_LINK = "//p[contains(text(),'Upgrade Eligibility Checker')]";
     public static final String CARRIER_CREDIT_CHECK_LINK = "";
     public static final String ELECTRONIC_TRADEIN_LINK = "";
@@ -31,7 +31,7 @@ public class ControlLocators {
     /* end region Home Page Retail Elements */
 
     /* region Choose a Path */
-    public static final String NEW_ACTIVATION = "//h3[contains(text(),'New Activation')]";
+    public static final String NEW_ACTIVATION = "//h3[contains(text(),'New Activation')]/..";
     public static final String EXISTING_CAREER = "//h3[contains(text(),'Existing Carrier')]";
     public static final String BROWSE_PHONES = "//h3[contains(text(),'Browse Phones')]";
     public static final String BROWSE_PLANS = "//h3[contains(text(),'Browse Plans')]";
@@ -169,7 +169,7 @@ public class ControlLocators {
     public static final String KEEP_MY_EXISTING_VERIZON_WIRELESS_LEGACY_ADD_BUTTON = "//h1[contains(text(),'Keep My Existing Verizon')]/parent::div/parent::div/following-sibling::div/child::a/child::img";
     public static final String VERIZON_MORE_EVERYTHING = "//h1[contains(text(),'Verizon More Everything Unlimited Minutes & Messaging - 500MB Data')]/parent::a/parent::div/parent::div/following-sibling::div/child::a/child::img";
     public static final String VERIZON_MORE_PLAN_ONLY = "(//h1[contains(text(),'Verizon More Everything Unlimited Minutes & Messaging - 2GB Data')])[1]/parent::a";
-    public static final String SPRINT_FAMILY_SHARE_PLAN = "(//h1[contains(text(),'Sprint Family Share')])[1]";
+    public static final String SPRINT_FAMILY_SHARE_PLAN = "(//div[contains(text(),'select plan')])[2]";
     public static final String SPRINT_MORE_EVERYTHING ="";
     public static final String ADD_PLAN = "//span[contains(text(),'add')]";
     public static final String SELECT_FEATURE_CHECKBOX = "//span[@class='ui-icon ui-icon-shadow ui-icon-checkbox-off']";
